@@ -8,8 +8,8 @@ MAINTAINER 15950194@qq.com
 
 # Update Centos
 
-RUN apt-get update \
-    && apt-get install -y zlib zlib-devel pcre pcre-devel openssl openssl-devel wget
+RUN yum update -y \
+    && yum install -y zlib zlib-devel pcre pcre-devel openssl openssl-devel wget
 
 # Install nginx
 
