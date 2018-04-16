@@ -11,10 +11,13 @@ MAINTAINER 15950194@qq.com
 RUN yum update -y && \
     yum install -y zlib zlib-devel pcre pcre-devel openssl openssl-devel wget make gcc gcc-c++
 
+# set workdir
+  cd / && mkdir downloads
+  WORKDIR /downloads
+
 # Install nginx
 
-RUN cd / && mkdir downloads && cd /downloads && \
-    wget https://nginx.org/download/nginx-1.10.1.tar.gz && \
+RUN wget https://nginx.org/download/nginx-1.10.1.tar.gz && \
     tar -zxvf nginx-1.10.1.tar.gz && \
     cd nginx-1.10.1 && ./configure && \
     make && make install && \
