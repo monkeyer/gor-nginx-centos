@@ -12,8 +12,10 @@ RUN yum update -y && \
     yum install -y zlib zlib-devel pcre pcre-devel openssl openssl-devel wget make gcc gcc-c++
 
 # set workdir
-  cd / && mkdir downloads
-  WORKDIR /downloads
+
+RUN cd / && mkdir downloads
+
+WORKDIR /downloads
 
 # Install nginx
 
