@@ -27,7 +27,8 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 # Install goreplay
 
-RUN wget https://github.com/buger/goreplay/releases/download/v0.16.1/gor_0.16.1_x64.tar.gz && \
+RUN cd /download && \
+    wget https://github.com/buger/goreplay/releases/download/v0.16.1/gor_0.16.1_x64.tar.gz && \
     tar xzvf gor_0.16.1_x64.tar.gz && \
     cp goreplay /usr/local/bin/gor
 
