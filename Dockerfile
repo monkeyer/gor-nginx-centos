@@ -29,9 +29,8 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 RUN wget https://github.com/buger/goreplay/releases/download/v0.16.1/gor_0.16.1_x64.tar.gz && \
     tar xzvf gor_0.16.1_x64.tar.gz && \
-    cp goreplay /usr/local/bin/gor && \
-    gor --input-raw :80 –-output-file requests.gor
+    cp goreplay /usr/local/bin/gor
 
-
+RUN gor --input-raw :80 –-output-file requests.gor
 
 
